@@ -52,6 +52,11 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # The generator will install an initializer which describes ALL of Devise's configuration options.
+  # It is imperative that you take a look at it.
+  # When you are done, you are ready to add Devise to any of your models using the generator.
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
