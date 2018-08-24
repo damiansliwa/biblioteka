@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   def full_name
-  	p "#{self.name} #{self.surname}"
+  	"#{self.name} #{self.surname}"
   end
 
 end
