@@ -1,0 +1,16 @@
+<div>
+  <table>
+  	<thead>
+      <td>Name</td>
+      <td>Author</td>
+      <td>ISBN</td>
+    </thead>
+    <% @item.each do |item| %>
+      <tr>
+      	<td><%= item.name %></td>
+      	<td><%= item.author %></td>
+      	<td><%= item.ISBN %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
