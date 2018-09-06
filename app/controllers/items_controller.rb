@@ -21,10 +21,25 @@ class ItemsController < ApplicationController
   	@item = Item.all
   end
 
+  def edit
+  	@item = Item.find(params[:id])
+  end
+
+  def update
+  	@item = Item.find(params[:id])
+  	if @item.update_attributes(item_params)
+  	  flash[:success] = "Item updated"
+  	  redirect_to @item
+  	else
+  	  render 'edit'
+  	end
+  end
+
   private
 
-  def item_params
-  	params.require(:item).permit(:name, :author, :ISBN,
+    def item_params
+      params.require(:item).permit(:name, :author, :ISBN,
                                    :item_type)
-  end
+    end
+
 end
