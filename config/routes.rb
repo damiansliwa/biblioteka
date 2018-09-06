@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "application#hello"
+  root "items#index"
   devise_for :users
   resources :items
   
