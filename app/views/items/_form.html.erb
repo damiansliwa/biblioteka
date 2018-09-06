@@ -1,0 +1,26 @@
+<%= form_for @item do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ISBN %><br />
+    <%= f.text_field :ISBN %>
+  </div>
+
+  <div class="field">
+    <%= f.label :item_type %><br />
+    <%= f.select :item_type, Item.item_types.keys.map { |i| i.humanize } %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
