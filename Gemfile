@@ -38,6 +38,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Add Devise
 gem 'devise'
 
+# This gem provides a simple and extremely flexible way to upload files from Ruby applications.
+gem 'carrierwave', '~> 0.10.0'
+# Helps with the resizing of images in  Rails application.
+gem 'mini_magick', '~> 4.3'
+
 group :development, :test do
   gem 'sqlite3', '1.3.13' #from Hartl's book
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -39,7 +39,7 @@ class ItemsController < ApplicationController
 
     def item_params
       params.require(:item).permit(:name, :author, :ISBN,
-                                   :item_type)
+                                   :item_type, :cover)
     end
 
 end
