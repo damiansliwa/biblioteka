@@ -1,12 +1,18 @@
 <div>
   <table>
   	<thead>
-      <td>Name</td>
+      <td>Cover</td>
       <td>Author</td>
       <td>ISBN</td>
+      <td>Name</td>
     </thead>
     <% @item.each do |item| %>
       <tr>
+        <td>
+          <% if item.cover? %>
+            <%= image_tag item.cover.thumb.url %>
+          <% end %>
+        </td>
       	<td><%= item.name %></td>
       	<td><%= item.author %></td>
       	<td><%= item.ISBN %></td>

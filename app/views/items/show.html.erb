@@ -3,4 +3,9 @@
   <p>Author: <%= @item.author %></p>
   <p>ISBN: <%= @item.ISBN %></p>
   <p>Item type: <%= @item.item_type %></p>
+  <% if @item.cover? %>
+    <p>Cover: <%= image_tag @item.cover.thumb.url %></p>
+  <% else %>
+    <p>This don't have a cover yet. You can add it here.</p>
+  <% end %>  	  
 </div>
