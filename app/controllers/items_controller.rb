@@ -18,7 +18,7 @@ class ItemsController < ApplicationController
   end
 
   def index
-  	@item = Item.all
+  	@items = Item.all
   end
 
   def edit
@@ -28,7 +28,6 @@ class ItemsController < ApplicationController
   def update
   	@item = Item.find(params[:id])
   	if @item.update_attributes(item_params)
-  	  flash[:success] = "Item updated"
   	  redirect_to @item
   	else
   	  render 'edit'
