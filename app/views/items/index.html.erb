@@ -4,7 +4,7 @@
 <div>
   <table>
   	<thead>
-      <td>Cover</td>
+      <td></td>
       <td>Name</td>
       <td>Author</td>
       <td>ISBN</td>
@@ -16,10 +16,10 @@
             <%= image_tag item.cover.thumb.url %>
           <% end %>
         </td>
-      	<td><%= link_to item.name, item_path(item.id) %></td>
+      	<td><%= link_to item.name, item_path(item) %></td>
       	<td><%= item.author %></td>
       	<td><%= item.ISBN %></td>
-        <td><%= link_to "Edit item", edit_item_path(item.id) %></td>
+        <td><%= link_to "Edit item", edit_item_path(item) %></td>
       </tr>
     <% end %>
   </table>
