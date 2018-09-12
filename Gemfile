@@ -42,6 +42,9 @@ gem 'devise'
 gem 'carrierwave', '~> 0.10.0'
 # Helps with the resizing of images in  Rails application.
 gem 'mini_magick', '~> 4.3'
+# Use Haml engine for write HTML documents
+gem 'haml', '~> 5.0', '>= 5.0.4'
+gem "haml-rails", "~> 1.0"
 
 group :development, :test do
   gem 'sqlite3', '1.3.13' #from Hartl's book
