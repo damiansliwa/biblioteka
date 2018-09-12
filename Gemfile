@@ -45,6 +45,8 @@ gem 'mini_magick', '~> 4.3'
 # Use Haml engine for write HTML documents
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem "haml-rails", "~> 1.0"
+# Paginator
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13' #from Hartl's book
