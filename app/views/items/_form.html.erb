@@ -23,8 +23,8 @@
   <div class="field">
     <%= f.label :cover %><br />
     <%= f.file_field :cover %>
-    <% if f.object.cover? %>
-      <%= image_tag f.object.cover.thumb.url %>
+    <% if @item.cover? %>
+      <%= image_tag @item.cover.thumb.url %>
       <%= f.label :remove_cover %>
       <%= f.check_box :remove_cover %> 
     <% end %>

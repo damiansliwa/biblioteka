@@ -47,6 +47,10 @@ group :development, :test do
   gem 'sqlite3', '1.3.13' #from Hartl's book
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use rspec-rails for testing
+  gem 'rspec-rails', '~> 3.8'
+  # Provides RSpec- and Minitest-compatible one-liners that test common Rails functionality 
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
