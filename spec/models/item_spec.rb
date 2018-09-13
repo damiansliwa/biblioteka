@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: items
+#
+#  id         :integer          not null, primary key
+#  name       :string
+#  author     :string
+#  ISBN       :string
+#  item_type  :integer          default("book")
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  user_id    :integer
+#  cover      :string
+#
+
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do

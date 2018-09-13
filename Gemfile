@@ -56,6 +56,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   # Provides RSpec- and Minitest-compatible one-liners that test common Rails functionality 
   gem 'shoulda-matchers', '~> 3.1'
+  # Use this to add a comment summarizing the current schema to the top or bottom
+  # of each of your ActiveRecord models, Fixture files, Tests and Specs, routes.rb file etc.
+  gem 'annotate', '~> 2.7', '>= 2.7.4'
 end
 
 group :development do
