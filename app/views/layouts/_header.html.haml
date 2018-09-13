@@ -6,6 +6,6 @@
           %li= link_to "Home", root_path
           %li= link_to "About",   '#'
           %li= link_to "Log in", '#'
-        = form_tag(items_path, method: :get, :name => nil) do
+        = form_tag(items_path, method: :get) do
           = text_field_tag :search, params[:search], placeholder: " Search"
           = submit_tag "Search", :name => nil

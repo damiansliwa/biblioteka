@@ -19,9 +19,9 @@ class ItemsController < ApplicationController
 
   def index
   	if params[:search]
-  	  @items = Item.search(params[:search]).page(params[:page]).per(5)
+  	  @items = Item.search(params[:search]).order("id").page(params[:page]).per(5)
   	else
-  	  @items = Item.all.order("name").page(params[:page]).per(5)
+  	  @items = Item.all.order("id").page(params[:page]).per(5)
     end
   end
 

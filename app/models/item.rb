@@ -5,9 +5,8 @@ class Item < ApplicationRecord
   enum item_type: [:book, :music, :film]
   mount_uploader :cover, CoverUploader
 
-  def self.search(params)
-  	where("name LIKE ? OR author LIKE ?", "%#{params}%", "%#{params}%")
+
+  def self.search(search)
+  	where("name LIKE ? OR author LIKE ?", "%#{search}%", "%#{search}%")
   end
-
-
 end
