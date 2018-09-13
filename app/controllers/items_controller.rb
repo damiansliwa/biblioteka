@@ -18,11 +18,10 @@ class ItemsController < ApplicationController
   end
 
   def index
-  	@items = if params[:search]
-  		Item.where('name LIKE ?', "%#{params[:search]}%")
-  	  else
-  	  	#@items = Item.all
-  	    @items = Item.order("name").page(params[:page]).per(5)
+  	if params[:search]
+  	  @items = Item.search(params[:search]).page(params[:page]).per(5)
+  	else
+  	  @items = Item.all.order("name").page(params[:page]).per(5)
     end
   end
 
