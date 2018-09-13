@@ -1,0 +1,19 @@
+%div
+  = link_to "Add item", new_item_path
+%div
+  %table
+    %thead
+      %td
+      %td Name
+      %td Author
+      %td ISBN
+    - @items.each do |item|
+      %tr
+        %td
+          - if item.cover?
+            = image_tag item.cover.thumb.url
+        %td= link_to item.name, item_path(item)
+        %td= item.author
+        %td= item.ISBN
+        %td= link_to "Edit item", edit_item_path(item)
+  = paginate @items

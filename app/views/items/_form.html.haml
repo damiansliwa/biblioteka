@@ -1,0 +1,27 @@
+= form_for @item, html: { multipart: true } do |f|
+  .field
+    = f.label :name
+    %br/
+    = f.text_field :name
+  .field
+    = f.label :author
+    %br/
+    = f.text_field :author
+  .field
+    = f.label :ISBN
+    %br/
+    = f.text_field :ISBN
+  .field
+    = f.label :item_type
+    %br/
+    = f.select :item_type, Item.item_types.keys.map
+  .field
+    = f.label :cover
+    %br/
+    = f.file_field :cover
+    - if @item.cover?
+      = image_tag @item.cover.thumb.url
+      = f.label :remove_cover
+      = f.check_box :remove_cover
+  .actions
+    = f.submit "Save"
