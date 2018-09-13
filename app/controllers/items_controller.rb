@@ -18,7 +18,12 @@ class ItemsController < ApplicationController
   end
 
   def index
-  	@items = Item.order("name").page(params[:page]).per(3)
+  	@items = if params[:search]
+  		Item.where('name LIKE ?', "%#{params[:search]}%")
+  	  else
+  	  	#@items = Item.all
+  	    @items = Item.order("name").page(params[:page]).per(5)
+    end
   end
 
   def edit
@@ -38,7 +43,8 @@ class ItemsController < ApplicationController
 
     def item_params
       params.require(:item).permit(:name, :author, :ISBN,
-                                   :item_type, :cover, :remove_cover)
+                                   :item_type, :cover, :remove_cover,
+                                   :search)
     end
 
 end
