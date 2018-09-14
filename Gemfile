@@ -36,8 +36,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Required for Rails 5.1+, because Bootstrap JavaScript depends on jQuery
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-# Sprockets Rails integration; at least v2.3.2. required by bootstrap
-gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 # Add Devise
 gem 'devise'
@@ -54,6 +52,10 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 # Use Bootstrap - the most popular HTML, CSS, and JavaScript framework
 # for developing responsive, mobile first projects on the web
 gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+# Sprockets Rails integration; at least v2.3.2. required by bootstrap
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
+# Use FontAwesome
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13' #from Hartl's book
