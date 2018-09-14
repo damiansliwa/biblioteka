@@ -1,11 +1,13 @@
-%body
-  %header.header
-    %div
-      %nav
-        %ul.nav
-          %li= link_to "Home", root_path
-          %li= link_to "About",   '#'
-          %li= link_to "Log in", '#'
-        = form_tag(items_path, method: :get) do
-          = text_field_tag :search, params[:search], placeholder: " Search"
-          = submit_tag "Search", :name => nil
+%header.header
+  .container
+    %nav
+      %ul.nav
+        %li.nav-item
+          = link_to "Home", root_path, :class => "nav-link active"
+        %li.nav-item
+          = link_to "About", "#", :class => "nav-link active"
+        %li.nav-item
+          = link_to "Log in", "#", :class => "nav-link active"
+      = form_tag(items_path, method: :get) do
+        = text_field_tag :search, params[:search], placeholder: " Search"
+        = submit_tag "Search", :name => nil
