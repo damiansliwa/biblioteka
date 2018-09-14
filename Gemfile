@@ -14,9 +14,12 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-gem 'duktape'
+# This gem causes an "ExecJS::ProgramError" with bootstrap installed
+# gem 'duktape'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
+#For Windows it works with CofferScript v1.8
+gem 'coffee-script-source', '1.8.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -33,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Required for Rails 5.1+, because Bootstrap JavaScript depends on jQuery
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+# Sprockets Rails integration; at least v2.3.2. required by bootstrap
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 
 # Add Devise
 gem 'devise'
