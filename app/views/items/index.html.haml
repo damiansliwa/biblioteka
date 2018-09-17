@@ -3,6 +3,9 @@
   = link_to "Add item", new_item_path
 = paginate @items
 %div
+  - if params[:search]
+    %br
+    %h3 Searching results:
   %table.table.table-striped
     %thead
       %tr
