@@ -2,27 +2,6 @@
   %h2 Items
   = link_to "Add item", new_item_path, id: "new_link", remote: true
 = paginate @items
-= render 'items/item'
-/ #all_items
-/   - if params[:search]
-/     %br
-/     %h3 Searching results:
-/   %table.table.table-striped
-/     %thead
-/       %tr
-/         %th{scope: "col"}
-/         %th{scope: "col"} Name
-/         %th{scope: "col"} Author
-/         %th{scope: "col"} ISBN
-/         %th{scope: "col"}
-/     %tbody
-/       - @items.each do |item|
-/         %tr
-/           %td
-/             - if item.cover?
-/               = image_tag item.cover.thumb.url
-/           %td= link_to item.name, item_path(item)
-/           %td= item.author
-/           %td= item.ISBN
-/           %td= link_to "Edit item", edit_item_path(item)
+#items_all
+  = render 'items/items_all'
 = paginate @items

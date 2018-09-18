@@ -15,8 +15,8 @@ class ItemsController < ApplicationController
       	format.html { redirect_to items_path }
       	format.js
       end
-    else
-      render 'new'
+    # else
+    #   render 'new'
     end
   end
 
