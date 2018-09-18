@@ -11,7 +11,10 @@ class ItemsController < ApplicationController
   def create
   	@item = Item.new(item_params)
     if @item.save
-      redirect_to @item
+      respond_to do |format|
+      	format.html { redirect_to items_path }
+      	format.js
+      end
     else
       render 'new'
     end
