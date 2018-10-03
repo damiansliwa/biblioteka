@@ -8,5 +8,7 @@ RSpec.configure do |config|
   # Use the specified formatter
   config.formatter = :documentation # :progress, :html, :textmate
 
+  # Turn the deprecation warnings into errors to give a full backtrace
+  config.raise_errors_for_deprecations!
 
 end

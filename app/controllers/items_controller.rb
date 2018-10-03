@@ -9,9 +9,13 @@ class ItemsController < ApplicationController
   end
 
   def create
+  	@items = Item.all
   	@item = Item.new(item_params)
     if @item.save
-      redirect_to @item
+      respond_to do |format|
+      	format.html { redirect_to items_path }
+      	format.js
+      end
     else
       render 'new'
     end
@@ -19,9 +23,9 @@ class ItemsController < ApplicationController
 
   def index
   	if params[:search]
-  	  @items = Item.search(params[:search]).order("id").page(params[:page]).per(5)
+  	  @items = Item.search(params[:search]).order("id").page(params[:page]).per(10)
   	else
-  	  @items = Item.all.order("id").page(params[:page]).per(5)
+  	  @items = Item.all.order("id").page(params[:page]).per(10)
     end
   end
 

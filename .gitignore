@@ -32,3 +32,6 @@
 
 # Ignore folder with uploaded files
 /public/uploads/*
+
+# Ignore RubyMine files
+/.idea/*
