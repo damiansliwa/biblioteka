@@ -45,9 +45,8 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      params.require(:item).permit(:name, :author, :ISBN,
-                                   :item_type, :cover, :remove_cover,
-                                   :search)
+      params.require(:item).permit(:name, :author, :ISBN, :item_type,
+      	                           :cover, :remove_cover, :search)
     end
 
 end

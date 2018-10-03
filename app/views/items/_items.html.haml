@@ -1,0 +1,15 @@
+= paginate @items
+- if params[:search]
+  %br
+  %h3 Searching results:
+%table.table.table-striped#items_all
+  %thead
+    %tr
+      %th{scope: "col"}
+      %th{scope: "col"} Name
+      %th{scope: "col"} Author
+      %th{scope: "col"} ISBN
+      %th{scope: "col"}
+  %tbody
+    = render @items
+= paginate @items
